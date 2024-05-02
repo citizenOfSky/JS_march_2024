@@ -129,7 +129,9 @@ console.log(users);
     {Friday: [{morning: 7,afternoon: 12,evening: 11}]},
     {Saturday: [{morning: 3,afternoon: 14,evening: 14}]},
     {Sunday: [{morning: 4,afternoon: 10,evening: 13}]},
-]
+    ]
+    console.log(temperature_of_week);
+
 
 // Логічні розгалуження:
 //     - Є змінна х, якій ви надаєте довільне числове значення.
