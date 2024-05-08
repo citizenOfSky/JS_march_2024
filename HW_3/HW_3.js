@@ -201,9 +201,6 @@ for (const product of products) {
 
 }
 
-// ЯК СТИЛІЗУВАТИ ЗА КЛАСАМИ: .product-card і .product-title? У ФАЙЛІ main_3.js НЕ ВИХОДИТЬ.
-// СТВОРЮВАВ ОКРЕМИЙ CSS ФАЙЛ, АЛЕ ЯК ТОДІ ЙОГО ПРИВ'ЯЗАТИ ДО ПОТОЧНОГО ФАЙЛУ?
-
 //     є масив
 // let users = [
 //     {name: 'vasya', age: 31, status: false},
