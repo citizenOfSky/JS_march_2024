@@ -1,0 +1,237 @@
+<!-- - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б-->
+<!-- - створити функцію яка обчислює та повертає площу кола з радіусом r-->
+<!-- - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r-->
+<!-- - створити функцію яка приймає масив та виводить кожен його елемент-->
+<!-- - створити функцію яка створює параграф з текстом. Текст задати через аргумент-->
+<!-- - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий-->
+<!-- - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)-->
+<!-- - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список-->
+<!-- - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.-->
+<!-- - створити функцію яка повертає найменьше число з масиву-->
+<!-- - створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13-->
+<!-- - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відаовідних індексах-->
+<!--Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]-->
+<!-- - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)-->
+<!--Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250-->
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+<script>
+    // <!-- - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б-->
+    function s_rectangle(a, b) {
+        return a * b;
+    }
+    let s = s_rectangle(5, 10);
+    console.log(s);
+
+    <!-- - створити функцію яка обчислює та повертає площу кола з радіусом r-->
+    function s_round(r) {
+        return Math.PI * r ** 2;
+    }
+    let sqr = s_round(3.14, 4);
+    console.log(sqr);
+
+    <!-- - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r-->
+    function s_cylinder(r, h) {
+        return 2 * (Math.PI * r ** 2) + 2 * Math.PI * r * h
+    }
+    let sq = s_cylinder(3.14, 8, 15);
+    console.log(sq);
+
+    <!-- - створити функцію яка приймає масив та виводить кожен його елемент-->
+    function printMass(mass) {
+        for (const item of mass){
+            console.log(item);
+        }
+    }
+    let users = [
+        {name: 'Aleks', username: 'halk', password: 1234},
+        {name: 'Oleg', username: 'bober', password: 5648},
+        {name: 'Lesya', username: 'kvitka', password: 8469},
+        {name: 'Oleksa', username: 'nikita', password: 7842},
+        {name: 'Mykyta', username: 'cowboy', password: 5493},
+        {name: 'Karyna', username: 'vyskochka', password: 4836},
+        {name: 'Olga', username: 'queen', password: 9618},
+        {name: 'Victor', username: 'driver', password: 8210},
+        {name: 'Victoria', username: 'malina', password: 6928},
+        {name: 'Albina', username: 'volonter', password: 8106},
+    ];
+    printMass(users);
+
+    <!-- - створити функцію яка створює параграф з текстом. Текст задати через аргумент-->
+
+    function paragraf(p) {
+        return p;
+    }
+    let text = paragraf('We study different disciplines.');
+    console.log(text);
+
+    // AБО
+
+    function par(paragraph) {
+        document.write(
+            `
+            <div>
+                <p>${paragraph}</p>
+            </div>
+            `
+        );
+    }
+    par('We study different disciplines.');
+
+    // <!-- - створити функцію яка створює ul з трьома елементами li.
+    // Текст li задати через аргумент всім однаковий-->
+
+    function ulLi(unList) {
+        document.write(
+            `
+            <ul>
+                <li>${unList}</li>
+                <li>${unList}</li>
+                <li>${unList}</li>
+            </ul>
+            `
+        );
+    }
+    ulLi('JS');
+
+    // <!-- - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент
+    //  всім однаковий. Кількість li визначається другим аргументом, який є числовим
+    //  (тут використовувати цикл)-->
+
+
+    function list(item, amount, tagLi, tagUl) {
+        for(let i = 0; i < amount; i++ )
+
+            document.write(
+                `
+            <${tagUl}>
+                <${tagLi}>${item}</${tagLi}>
+            </${tagUl}>
+            `
+            );
+    }
+    list('Phyton', 3, 'li', 'ul')
+
+    // <!-- - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві),
+    // та будує для них список-->
+    let items = ['html', 'css', true, false, 456, -666];
+    info();
+    function info() {
+        for(const item of items)
+            document.write(
+                `
+            <ul>
+                <li>${item}</li>
+            </ul>
+            `
+            );
+    }
+
+    // <!-- - створити функцію яка приймає масив об'єктів з наступними полями id,name,age ,
+    // та виводить їх в документ. Для кожного об'єкту окремий блок.-->
+    let students = [
+        {id: 1, name: 'vasya', age: 31},
+        {id: 2, name: 'petya', age: 30},
+        {id: 3, name: 'kolya', age: 29},
+        {id: 4, name: 'olya', age: 28},
+        {id: 5, name: 'max', age: 30},
+        {id: 6, name: 'anya', age: 31},
+        {id: 7, name: 'oleg', age: 28},
+        {id: 8, name: 'andrey', age: 29},
+        {id: 9, name: 'masha', age: 30},
+        {id: 10, name: 'olya', age: 31},
+        {id: 11, name: 'max', age: 31}
+    ];
+    for (const student of students){
+        group(student.id, student.name, student.age)
+    }
+    function group(id, name, age) {
+        document.write(
+            `
+            <div>
+                ${id}. ${name} - ${age}
+            </div>
+            `
+        )
+    }
+
+    // <!-- - створити функцію яка повертає найменьше число з масиву-->
+    function fnMin() {
+        let min = arguments[0]
+        for (const minElement of arguments) {
+            if(minElement < min){
+                min = minElement
+            }else{
+                console.log('')
+            }
+        }
+        return min;
+    }
+    let result = fnMin(666, -99, 369, 0, 847);
+    console.log('min', result)
+
+    // <!-- - створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву
+    // та повертає його. Приклад sum([1,2,10]) //->13-->
+    let numbers = [55, 818, 984, -886, 0, 748]
+    function sum(mass) {
+        let sum = 0;
+        for (let i = 0; i < mass.length; i++) {
+            sum += mass[i];
+        }
+        console.log(sum)
+        return numbers;
+    }
+    sum(numbers)
+
+    // <!-- - створити функцію swap(arr,index1,index2).
+    // Функція міняє місцями заняення у відаовідних індексах-->
+    // <!--Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]-->
+
+    let massOfNums = [[11,22,33,44],0,1]
+    function swap(arr,arrInArr,index1,index2,obj2,obj3) {
+        let newIndex = arrInArr[index1];
+        arrInArr[index1] = arrInArr[index2];
+        arrInArr[index2] = newIndex;
+        obj2 = null;
+        obj3 = null;
+        arr = massOfNums;
+
+        return arr;
+    }
+    console.log(swap(massOfNums, arrInArr = [0], index1 = arrInArr[0], index2 = arrInArr[1],
+    obj2 = [1], obj3 = [2]))
+
+
+    // <!-- - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)-->
+    // <!--Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250-->
+    // let currencyValues = [
+    //     {currency:'USD',value:40},
+    //     {currency:'EUR',value:42}
+    // ]
+    // function exchange(sumUAH,currencyValues,exchangeCurrency) {
+    //     let sum = sumUAH / currencyValues
+    //     if () {
+    //         case currencyValues === 42 && 'EUR') {
+    //             console.log(exchangeCurrency);
+    //         }
+    //         else if ()
+    //     }
+    // }
+
+
+</script>
+</body>
+</html>

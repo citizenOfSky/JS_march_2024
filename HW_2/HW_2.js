@@ -53,9 +53,8 @@
         pageCount: 640,
         genre: "Modern thriller",
         author: [
-            {name: 'Donna Tartt',
-             age: 74
-            }
+            {name: 'Donna Tartt'},
+            {age: 74}
         ]
     }
 
