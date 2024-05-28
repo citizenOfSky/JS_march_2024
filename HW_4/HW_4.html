@@ -201,36 +201,47 @@
     // <!--Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]-->
 
     let massOfNums = [[11,22,33,44],0,1]
-    function swap(arr,arrInArr,index1,index2,obj2,obj3) {
-        let newIndex = arrInArr[index1];
-        arrInArr[index1] = arrInArr[index2];
-        arrInArr[index2] = newIndex;
-        obj2 = null;
-        obj3 = null;
-        arr = massOfNums;
+    console.log(massOfNums);
+    function fnArr(massOfNums) {
+        let singleMass = [];
+        for (const element of massOfNums) {
+            if (element === massOfNums[0]) {
+                singleMass.push(element);
+            }
+        }
+        return singleMass;
 
-        return arr;
     }
-    console.log(swap(massOfNums, arrInArr = [0], index1 = arrInArr[0], index2 = arrInArr[1],
-    obj2 = [1], obj3 = [2]))
+
+        function swap(arr, index1, index2) {
+            let newIndex = arr[index1];
+            arr[index1] = arr[index2];
+            arr[index2] = newIndex;
+
+            return arr;
+
+    }
+    let singleMass = fnArr(massOfNums) ;
+
+    swap(singleMass, 0, 1)
+    console.log(singleMass);
+
+
+    // НЕ ВИХОДИТЬ ЩОСЬ...
+    // ЯК ПРИБРАТИ ОСТАННІ 2 ІНДЕКСИ — swap([11,22,33,44],0,1) //=> [22,11,33,44]?
 
 
     // <!-- - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)-->
     // <!--Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250-->
-    // let currencyValues = [
-    //     {currency:'USD',value:40},
-    //     {currency:'EUR',value:42}
-    // ]
     // function exchange(sumUAH,currencyValues,exchangeCurrency) {
-    //     let sum = sumUAH / currencyValues
-    //     if () {
-    //         case currencyValues === 42 && 'EUR') {
-    //             console.log(exchangeCurrency);
+    //
+    //     if (currencyValues[0] === 'USD' && 40) {
+    //         return sumUAH / currencyValues
     //         }
-    //         else if ()
-    //     }
+    //
     // }
-
+    // exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD')
+    // console.log(result);
 
 </script>
 </body>
